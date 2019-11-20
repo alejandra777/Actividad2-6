@@ -9,8 +9,9 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button INICIOSESSION;
-    Button REGISTRAR;
+    Button ver;
+
+
 
 
     @Override
@@ -18,24 +19,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        INICIOSESSION = (Button) findViewById(R.id.btn_i);
-        INICIOSESSION.setOnClickListener(new View.OnClickListener() {
+        ver = (Button) findViewById(R.id.btn_ver);
+        ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent INICIOSESSION = new Intent(MainActivity.this, RECETAS.class);
-                startActivity(INICIOSESSION);
+                Intent ver = new Intent(MainActivity.this, RECETAS.class);
+                startActivity(ver);
             }
 
         });
-        REGISTRAR = (Button) findViewById(R.id.btn_r);
-        REGISTRAR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent REGISTRAR = new Intent(MainActivity.this, REGISTRO.class);
-                startActivity(REGISTRAR);
-            }
-        });
+
+
     }
+
+
+
+
+
 
         public void MAPA(View view){
             Intent MAPA = new Intent(this, MAPA.class);

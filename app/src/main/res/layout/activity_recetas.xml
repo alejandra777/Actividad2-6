@@ -4,82 +4,165 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo2"
+    android:background="@drawable/fon"
     tools:context=".RECETAS">
 
-    <Button
-        android:id="@+id/btn_ty"
-        android:layout_width="228dp"
-        android:layout_height="50dp"
-        android:text="TORTA DE YOGURT"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="290dp"
+        android:layout_height="433dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.729" />
+        app:layout_constraintVertical_bias="0.315"
+        app:srcCompat="@drawable/reposteria" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="350dp"
+        android:layout_height="417dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView114"
+            android:layout_width="186dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-black"
+            android:text="RECETA"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#630674"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="341dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Nombre"
+                    android:textColor="#A70037"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/nom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="#030303" />
+
+                <TextView
+                    android:id="@+id/textView112"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Ingredientes"
+                    android:textColor="#A70037"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/ing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/textView113"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Preparacion"
+                    android:textColor="#A70037"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/pre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btn_cachitos"
-        android:layout_width="228dp"
-        android:layout_height="50dp"
-        android:text="CACHITOS"
+        android:id="@+id/btn_agregar"
+        android:layout_width="251dp"
+        android:layout_height="37dp"
+        android:background="@drawable/fon3"
+        android:onClick="agregar"
+        android:text="AGREGAR"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.342" />
 
     <Button
-        android:id="@+id/btn_roscas"
-        android:layout_width="227dp"
-        android:layout_height="48dp"
-        android:text="ROSCAS"
+        android:id="@+id/btn_editar"
+        android:layout_width="251dp"
+        android:layout_height="35dp"
+        android:background="@drawable/fon3"
+        android:onClick="editar"
+        android:text="EDITAR"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_agregar"
+        app:layout_constraintVertical_bias="0.088" />
 
     <Button
-        android:id="@+id/btn_queque"
-        android:layout_width="228dp"
-        android:layout_height="50dp"
-        android:text="QUEQUE"
+        android:id="@+id/btn_eliminar"
+        android:layout_width="252dp"
+        android:layout_height="35dp"
+        android:background="@drawable/fon3"
+        android:onClick="Eliminar"
+        android:text="ELIMINAR"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="RECETAS"
-        android:textColor="#F80566"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_editar"
+        app:layout_constraintVertical_bias="0.141" />
 
     <Button
-        android:id="@+id/btn_chu"
-        android:layout_width="227dp"
-        android:layout_height="50dp"
-        android:text="BRAZO DE REINA"
+        android:id="@+id/btn_mostrar"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:background="@drawable/fon3"
+        android:onClick="mostrar"
+        android:text="MOSTRAR"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_eliminar"
+        app:layout_constraintVertical_bias="0.352" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
